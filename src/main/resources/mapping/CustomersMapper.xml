@@ -119,4 +119,10 @@
       score = #{score,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <select id="selectAll"  resultMap="BaseResultMap">
+     select * from customers
+  </select>
+
+
 </mapper>
