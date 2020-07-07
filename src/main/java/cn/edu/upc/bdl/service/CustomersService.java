@@ -9,7 +9,8 @@ import javax.swing.*;
 
 public interface CustomersService {
     List<Customers> getAll();
-    List<Customers> getUserByUsername(String username);
-    int insert(Customers users);
-
+    List<Customers> getCustomersByUsername(Customers customers);
+    int insert(Customers customers);
+    int updatePasswordById(Customers customers);
+    List<Customers> getPasswordByID(Customers customers);
 }
