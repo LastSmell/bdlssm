@@ -154,4 +154,11 @@
         where no = #{no,jdbcType=INTEGER}
     </update>
 
+    <select id="selectMarketable" resultMap="BaseResultMap">
+        select
+        *
+        from products
+        where reserve>0
+    </select>
+
 </mapper>

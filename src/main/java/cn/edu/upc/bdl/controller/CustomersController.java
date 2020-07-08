@@ -19,13 +19,13 @@ public class CustomersController {
 
     @RequestMapping("/getAll")
     @ResponseBody
-    public List<Customers> getAllUsers() {
+    public List<Customers> getAllCustomers() {
         return customersService.getAll();
     }
 
     @RequestMapping("/getAll1")
     @ResponseBody
-    public Map<String, Object> getAllUsers1() {
+    public Map<String, Object> getAllCustomers1() {
         Map map = new HashMap<String, Object>();
         map.put("status", "success");
         map.put("data", customersService.getAll());
@@ -34,7 +34,7 @@ public class CustomersController {
 
     @RequestMapping("/getCustomersByUsername")
     @ResponseBody
-    public Map<String, Object> getCustomersByUsername(@RequestBody Customers customers) {//@RequestBody可自动处理json数据
+    public Map<String, Object> getCustomersByUsername(@RequestBody Customers customers) {//@RequestBody可自动处理json数据,json数据不能缺少元素
         Map map = new HashMap<String, Object>();
         map.put("status", "success");
         map.put("data", customersService.getCustomersByUsername(customers));
@@ -60,7 +60,14 @@ public class CustomersController {
         map.put("result", customersService.updatePasswordById(customers));
         return map;
     }
-
+    @RequestMapping("/updatePassword")
+    @ResponseBody
+    public Map<String, Object> updateScore(@RequestBody Customers customers) {
+        Map map = new HashMap<String, Object>();
+        map.put("status", "success");
+        map.put("result", customersService.updateScoreById(customers));
+        return map;
+    }
     @RequestMapping("/delete")
     @ResponseBody
     public Map<String, Object> deleteAccount(@RequestBody Customers customers) {

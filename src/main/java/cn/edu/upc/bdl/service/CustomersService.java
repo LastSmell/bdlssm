@@ -12,6 +12,7 @@ public interface CustomersService {
     List<Customers> getCustomersByUsername(Customers customers);
     int insert(Customers customers);
     int updatePasswordById(Customers customers);
+    int updateScoreById(Customers customers);
     int deleteAccount(Customers customers);
     List<Customers> getPasswordByID(Customers customers);
 }

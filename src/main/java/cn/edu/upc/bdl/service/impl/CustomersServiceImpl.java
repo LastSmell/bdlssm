@@ -35,7 +35,11 @@ public class CustomersServiceImpl implements CustomersService {
 
         return customersMapper.updatePasswordById(customers.getId(),customers.getPassword());
     }
+    @Override
+    public int updateScoreById(Customers customers) {
 
+        return customersMapper.updateScoreById(customers.getId(),customers.getScore());
+    }
     @Override
     public int deleteAccount(Customers customers) {
 
@@ -45,6 +49,7 @@ public class CustomersServiceImpl implements CustomersService {
     public List<Customers> getPasswordByID(Customers customers){
         return customersMapper.selectPasswordByID(customers.getId());
     }
+
 
 
 }
