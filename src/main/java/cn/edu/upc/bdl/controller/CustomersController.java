@@ -34,7 +34,7 @@ public class CustomersController {
 
     @RequestMapping("/getCustomersByUsername")
     @ResponseBody
-    public Map<String, Object> getCustomersByUsername(@RequestBody Customers customers) {
+    public Map<String, Object> getCustomersByUsername(@RequestBody Customers customers) {//@RequestBody可自动处理json数据
         Map map = new HashMap<String, Object>();
         map.put("status", "success");
         map.put("data", customersService.getCustomersByUsername(customers));
@@ -61,6 +61,15 @@ public class CustomersController {
         return map;
     }
 
+    @RequestMapping("/delete")
+    @ResponseBody
+    public Map<String, Object> deleteAccount(@RequestBody Customers customers) {
+        Map map = new HashMap<String, Object>();
+        map.put("status", "success");
+        map.put("result", customersService.deleteAccount(customers));
+        return map;
+    }
+
     @RequestMapping("/login")
     @ResponseBody
     public Map<String, Object> getPasswordByID(@RequestBody Customers customers) {
@@ -69,6 +78,7 @@ public class CustomersController {
         map.put("result", customersService.getPasswordByID(customers));
         return map;
     }
+
 
 
 }

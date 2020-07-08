@@ -37,7 +37,14 @@ public class CustomersServiceImpl implements CustomersService {
     }
 
     @Override
+    public int deleteAccount(Customers customers) {
+
+        return customersMapper.updateByPrimaryKey(customers);
+    }
+    @Override
     public List<Customers> getPasswordByID(Customers customers){
         return customersMapper.selectPasswordByID(customers.getId());
     }
+
+
 }
