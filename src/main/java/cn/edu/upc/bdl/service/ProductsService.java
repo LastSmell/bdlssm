@@ -12,7 +12,7 @@ public interface ProductsService {
     int updateReserve(Products products);
     int updatePrice(Products products);
     int updateName(Products products);
-
+    int delete(Products products);
 
 
 }

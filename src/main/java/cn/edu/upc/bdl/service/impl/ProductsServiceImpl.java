@@ -32,5 +32,7 @@ public class ProductsServiceImpl implements ProductsService {
     public int updateName(Products products){
         return productsMapper.updateName(products.getNo(),products.getName());
     }
-
+    public int delete(Products products){
+        return productsMapper.delete(products.getNo());
+    }
 }

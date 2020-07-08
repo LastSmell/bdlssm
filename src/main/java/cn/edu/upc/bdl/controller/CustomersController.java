@@ -34,7 +34,7 @@ public class CustomersController {
 
     @RequestMapping("/getCustomersByUsername")
     @ResponseBody
-    public Map<String, Object> getCustomersByUsername(@RequestBody Customers customers) {//@RequestBody可自动处理json数据,json数据不能缺少元素
+    public Map<String, Object> getCustomersByUsername(@RequestBody Customers customers) {//@RequestBody可自动处理json数据
         Map map = new HashMap<String, Object>();
         map.put("status", "success");
         map.put("data", customersService.getCustomersByUsername(customers));

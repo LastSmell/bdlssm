@@ -48,8 +48,7 @@
         -->
         insert into customers (id, username, password,
         score)
-        values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},
-        #{score,jdbcType=INTEGER})
+        values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},0)
     </insert>
     <insert id="insertSelective" parameterType="cn.edu.upc.bdl.model.Customers">
         <!--

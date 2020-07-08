@@ -74,4 +74,13 @@ public class ProductsController {
         map.put("data",productsService.updateName(products));
         return map;
     }
+    @RequestMapping("/delete")
+    @ResponseBody
+    public Map<String,Object> delete(@RequestBody Products products){
+        Map map = new HashMap<String, Object>();
+        map.put("status", "success");
+        map.put("data",productsService.delete(products));
+        return map;
+    }
+
 }
