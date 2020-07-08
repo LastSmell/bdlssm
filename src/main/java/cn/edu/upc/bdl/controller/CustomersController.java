@@ -60,7 +60,7 @@ public class CustomersController {
         map.put("result", customersService.updatePasswordById(customers));
         return map;
     }
-    @RequestMapping("/updatePassword")
+    @RequestMapping("/updateScore")
     @ResponseBody
     public Map<String, Object> updateScore(@RequestBody Customers customers) {
         Map map = new HashMap<String, Object>();
