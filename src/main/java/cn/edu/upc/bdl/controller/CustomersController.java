@@ -68,7 +68,7 @@ public class CustomersController {
         map.put("result", customersService.updateScoreById(customers));
         return map;
     }
-    @RequestMapping("/delete")
+    @RequestMapping("/delete1")//无法删除记录，只能清除数据。
     @ResponseBody
     public Map<String, Object> deleteAccount(@RequestBody Customers customers) {
         Map map = new HashMap<String, Object>();
@@ -76,7 +76,14 @@ public class CustomersController {
         map.put("result", customersService.deleteAccount(customers));
         return map;
     }
-
+    @RequestMapping("/delete")
+    @ResponseBody
+    public Map<String, Object> delete(@RequestBody Customers customers) {
+        Map map = new HashMap<String, Object>();
+        map.put("status", "success");
+        map.put("result", customersService.delete(customers));
+        return map;
+    }
     @RequestMapping("/login")
     @ResponseBody
     public Map<String, Object> getPasswordByID(@RequestBody Customers customers) {

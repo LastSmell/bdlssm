@@ -50,6 +50,8 @@ public class CustomersServiceImpl implements CustomersService {
         return customersMapper.selectPasswordByID(customers.getId());
     }
 
-
-
+    @Override
+    public int delete(Customers customers){
+        return customersMapper.delete(customers.getId());
+    }
 }

@@ -15,4 +15,5 @@ public interface CustomersService {
     int updateScoreById(Customers customers);
     int deleteAccount(Customers customers);
     List<Customers> getPasswordByID(Customers customers);
+    int delete(Customers customers);
 }

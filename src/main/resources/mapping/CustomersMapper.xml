@@ -154,4 +154,9 @@
         where id = #{id,jdbcType=INTEGER}
     </update>
 
+    <delete id="delete" parameterType="java.lang.Integer">
+        delete from customers
+        where id = #{id,jdbcType=INTEGER}
+    </delete>
+
 </mapper>
