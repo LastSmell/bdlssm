@@ -24,7 +24,7 @@ public class ProductsServiceImpl implements ProductsService {
         return productsMapper.selectMarketable();
     }
     public int updateReserve(Products products){
-        return productsMapper.updateReserve(products.getNo(),products.getResever());
+        return productsMapper.updateReserve(products.getNo(),products.getReserve());
     }
     public int updatePrice(Products products){
         return productsMapper.updatePrice(products.getNo(),products.getPrice());

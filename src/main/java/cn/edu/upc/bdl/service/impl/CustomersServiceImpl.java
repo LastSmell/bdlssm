@@ -54,4 +54,12 @@ public class CustomersServiceImpl implements CustomersService {
     public int delete(Customers customers){
         return customersMapper.delete(customers.getId());
     }
+    @Override
+    public Customers getByPrimaryKey(Customers customers){
+        return customersMapper.selectByPrimaryKey(customers.getId());
+    }
+    @Override
+    public int updateById(Customers customers){
+        return customersMapper.updateByPrimaryKeySelective(customers);
+    }
 }

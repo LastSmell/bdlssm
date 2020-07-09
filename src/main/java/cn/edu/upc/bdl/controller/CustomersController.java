@@ -93,6 +93,21 @@ public class CustomersController {
         return map;
     }
 
+    @RequestMapping("/getSelective")
+    @ResponseBody
+    public Map<String, Object> getSelective(@RequestBody Customers customers) {
+        Map map = new HashMap<String, Object>();
+        map.put("status", "success");
+        map.put("result", customersService.getByPrimaryKey(customers));
+        return map;
+    }
 
-
+    @RequestMapping("/update")
+    @ResponseBody
+    public Map<String, Object> update(@RequestBody Customers customers) {
+        Map map = new HashMap<String, Object>();
+        map.put("status", "success");
+        map.put("result", customersService.updateById(customers));
+        return map;
+    }
 }

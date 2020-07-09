@@ -16,4 +16,6 @@ public interface CustomersService {
     int deleteAccount(Customers customers);
     List<Customers> getPasswordByID(Customers customers);
     int delete(Customers customers);
+    Customers getByPrimaryKey(Customers customers);
+    int updateById(Customers customers);
 }
