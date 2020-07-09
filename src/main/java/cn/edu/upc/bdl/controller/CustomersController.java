@@ -89,7 +89,7 @@ public class CustomersController {
     public Map<String, Object> getPasswordByID(@RequestBody Customers customers) {
         Map map = new HashMap<String, Object>();
         map.put("status", "success");
-        map.put("result", customersService.getPasswordByID(customers));
+        map.put("data", customersService.getPasswordByID(customers));
         return map;
     }
 
@@ -98,7 +98,7 @@ public class CustomersController {
     public Map<String, Object> getSelective(@RequestBody Customers customers) {
         Map map = new HashMap<String, Object>();
         map.put("status", "success");
-        map.put("result", customersService.getByPrimaryKey(customers));
+        map.put("data", customersService.getByPrimaryKey(customers));
         return map;
     }
 

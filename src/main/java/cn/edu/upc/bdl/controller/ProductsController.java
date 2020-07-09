@@ -55,7 +55,7 @@ public class ProductsController {
     public Map<String,Object> updateReserve(@RequestBody Products products){
         Map map = new HashMap<String, Object>();
         map.put("status", "success");
-        map.put("data",productsService.updateReserve(products));
+        map.put("result",productsService.updateReserve(products));
         return map;
     }
     @RequestMapping("/updatePrice")
@@ -63,7 +63,7 @@ public class ProductsController {
     public Map<String,Object> updatePrice(@RequestBody Products products){
         Map map = new HashMap<String, Object>();
         map.put("status", "success");
-        map.put("data",productsService.updatePrice(products));
+        map.put("result",productsService.updatePrice(products));
         return map;
     }
     @RequestMapping("/updateName")
@@ -71,7 +71,7 @@ public class ProductsController {
     public Map<String,Object> updateName(@RequestBody Products products){
         Map map = new HashMap<String, Object>();
         map.put("status", "success");
-        map.put("data",productsService.updateName(products));
+        map.put("result",productsService.updateName(products));
         return map;
     }
     @RequestMapping("/delete")
@@ -79,7 +79,7 @@ public class ProductsController {
     public Map<String,Object> delete(@RequestBody Products products){
         Map map = new HashMap<String, Object>();
         map.put("status", "success");
-        map.put("data",productsService.delete(products));
+        map.put("result",productsService.delete(products));
         return map;
     }
 

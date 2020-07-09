@@ -39,7 +39,7 @@ public class CpController {
     public Map<String, Object> insert(@RequestBody Cp cp) {
         Map map = new HashMap<String, Object>();
         map.put("status", "success");
-        map.put("data", cpService.insert(cp));
+        map.put("result", cpService.insert(cp));
         return map;
     }
 
