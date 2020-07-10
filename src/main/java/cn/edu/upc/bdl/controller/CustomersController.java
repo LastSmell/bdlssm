@@ -94,7 +94,7 @@ public class CustomersController {
         return map;
     }
 
-    @RequestMapping("/getSelective")
+    @RequestMapping("/getSelective")//返回List
     @ResponseBody
     public Map<String, Object> getSelective(@RequestBody Customers customers) {
         Map map = new HashMap<String, Object>();
