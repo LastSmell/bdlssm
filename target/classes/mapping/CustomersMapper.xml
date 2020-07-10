@@ -164,4 +164,11 @@
         from customers
     </select>
 
+    <select id="selectSelective" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        *
+        from customers
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+
 </mapper>

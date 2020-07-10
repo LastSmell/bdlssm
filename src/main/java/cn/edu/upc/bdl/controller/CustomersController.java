@@ -99,7 +99,7 @@ public class CustomersController {
     public Map<String, Object> getSelective(@RequestBody Customers customers) {
         Map map = new HashMap<String, Object>();
         map.put("status", "success");
-        map.put("data", customersService.getAllSelective(customers));
+        map.put("data", customersService.getSelective(customers));
         return map;
     }
 

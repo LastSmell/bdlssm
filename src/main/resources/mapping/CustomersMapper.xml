@@ -164,7 +164,7 @@
         from customers
     </select>
 
-    <select id="getAllSelective">
+    <select id="selectSelective" parameterType="java.lang.Integer" resultMap="BaseResultMap">
         select
         *
         from customers

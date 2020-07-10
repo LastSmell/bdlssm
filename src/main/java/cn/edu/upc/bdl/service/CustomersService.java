@@ -19,5 +19,5 @@ public interface CustomersService {
     Customers getByPrimaryKey(Customers customers);
     int updateById(Customers customers);
     int getLastId();
-    List<Customers> getAllSelective(Customers customers);
+    List<Customers> getSelective(Customers customers);
 }

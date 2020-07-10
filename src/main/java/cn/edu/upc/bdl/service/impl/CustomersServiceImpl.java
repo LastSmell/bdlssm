@@ -67,7 +67,7 @@ public class CustomersServiceImpl implements CustomersService {
         return customersMapper.selectLastId();
     }
     @Override
-    public List<Customers> getAllSelective(Customers customers){
-        return customersMapper.getAllSelective(customers.getId());
+    public List<Customers> getSelective(Customers customers){
+        return customersMapper.selectSelective(customers.getId());
     }
 }
