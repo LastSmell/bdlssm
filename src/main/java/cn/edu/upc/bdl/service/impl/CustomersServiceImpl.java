@@ -62,4 +62,12 @@ public class CustomersServiceImpl implements CustomersService {
     public int updateById(Customers customers){
         return customersMapper.updateByPrimaryKeySelective(customers);
     }
+    @Override
+    public int getLastId(){
+        return customersMapper.selectLastId();
+    }
+    @Override
+    public List<Customers> getAllSelective(Customers customers){
+        return customersMapper.getAllSelective(customers.getId());
+    }
 }

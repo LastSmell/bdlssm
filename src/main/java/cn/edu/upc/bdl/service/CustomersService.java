@@ -18,4 +18,6 @@ public interface CustomersService {
     int delete(Customers customers);
     Customers getByPrimaryKey(Customers customers);
     int updateById(Customers customers);
+    int getLastId();
+    List<Customers> getAllSelective(Customers customers);
 }

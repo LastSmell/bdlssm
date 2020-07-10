@@ -47,6 +47,7 @@ public class CustomersController {
         Map map = new HashMap<String, Object>();
         map.put("status", "success");
         map.put("result", customersService.insert(customers));
+        map.put("data",customersService.getLastId());
         return map;
     }
 
@@ -98,7 +99,7 @@ public class CustomersController {
     public Map<String, Object> getSelective(@RequestBody Customers customers) {
         Map map = new HashMap<String, Object>();
         map.put("status", "success");
-        map.put("data", customersService.getByPrimaryKey(customers));
+        map.put("data", customersService.getAllSelective(customers));
         return map;
     }
 
@@ -110,4 +111,6 @@ public class CustomersController {
         map.put("result", customersService.updateById(customers));
         return map;
     }
+
+
 }

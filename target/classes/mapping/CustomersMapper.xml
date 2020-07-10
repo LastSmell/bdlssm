@@ -158,4 +158,10 @@
         where id = #{id,jdbcType=INTEGER}
     </delete>
 
+    <select id="selectLastId" resultType="java.lang.Integer">
+        select
+        max(id)
+        from customers
+    </select>
+
 </mapper>
