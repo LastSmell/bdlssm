@@ -11,4 +11,6 @@ public interface CpService {
     List<Cp> getByCustomers(Cp cp);
     int delete(Cp cp);
     int insert(Cp cp);
+    int update(Cp cp);
+    int updatePlus(Cp cp);
 }

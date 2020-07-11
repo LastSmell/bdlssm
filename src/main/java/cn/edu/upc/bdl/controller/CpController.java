@@ -43,6 +43,24 @@ public class CpController {
         return map;
     }
 
+    @RequestMapping("/update")
+    @ResponseBody
+    public Map<String, Object> update(@RequestBody Cp cp) {
+        Map map = new HashMap<String, Object>();
+        map.put("status", "success");
+        map.put("result", cpService.update(cp));
+        return map;
+    }
+
+    @RequestMapping("/updatePlus")
+    @ResponseBody
+    public Map<String, Object> updatePlus(@RequestBody Cp cp) {
+        Map map = new HashMap<String, Object>();
+        map.put("status", "success");
+        map.put("result", cpService.updatePlus(cp));
+        return map;
+    }
+
     @RequestMapping("/getByProducts")
     @ResponseBody
     public Map<String, Object> getByProducts(@RequestBody Cp cp) {//@RequestBody可自动处理json数据

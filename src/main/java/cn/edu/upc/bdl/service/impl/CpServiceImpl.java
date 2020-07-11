@@ -33,5 +33,10 @@ public class CpServiceImpl implements CpService{
     public int insert(Cp cp){
         return cpMapper.insert(cp);
     }
-
+    public int update(Cp cp){
+        return cpMapper.updateByPrimaryKey(cp);
+    }
+    public int updatePlus(Cp cp){
+        return cpMapper.updatePlus(cp);
+    }
 }
