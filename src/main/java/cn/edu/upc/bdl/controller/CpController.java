@@ -1,7 +1,6 @@
 package cn.edu.upc.bdl.controller;
 
 import cn.edu.upc.bdl.model.Cp;
-import cn.edu.upc.bdl.model.CpKey;
 import cn.edu.upc.bdl.service.CpService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -34,6 +33,16 @@ public class CpController {
         return map;
     }
 
+    @RequestMapping("/getById")
+    @ResponseBody
+    public Map<String, Object> getById(@RequestBody Cp cp) {
+        Map map = new HashMap<String, Object>();
+        map.put("status", "success");
+        map.put("data", cpService.getById(cp));
+        return map;
+    }
+
+
     @RequestMapping("/insert")
     @ResponseBody
     public Map<String, Object> insert(@RequestBody Cp cp) {
@@ -43,47 +52,5 @@ public class CpController {
         return map;
     }
 
-    @RequestMapping("/update")
-    @ResponseBody
-    public Map<String, Object> update(@RequestBody Cp cp) {
-        Map map = new HashMap<String, Object>();
-        map.put("status", "success");
-        map.put("result", cpService.update(cp));
-        return map;
-    }
 
-    @RequestMapping("/updatePlus")
-    @ResponseBody
-    public Map<String, Object> updatePlus(@RequestBody Cp cp) {
-        Map map = new HashMap<String, Object>();
-        map.put("status", "success");
-        map.put("result", cpService.updatePlus(cp));
-        return map;
-    }
-
-    @RequestMapping("/getByProducts")
-    @ResponseBody
-    public Map<String, Object> getByProducts(@RequestBody Cp cp) {//@RequestBody可自动处理json数据
-        Map map = new HashMap<String, Object>();
-        map.put("status", "success");
-        map.put("data", cpService.getByProducts(cp));
-        return map;
-    }
-
-    @RequestMapping("/getByCustomers")
-    @ResponseBody
-    public Map<String, Object> getBuCustomers(@RequestBody Cp cp) {//@RequestBody可自动处理json数据
-        Map map = new HashMap<String, Object>();
-        map.put("status", "success");
-        map.put("data", cpService.getByCustomers(cp));
-        return map;
-    }
-    @RequestMapping("/delete")
-    @ResponseBody
-    public Map<String, Object> delete(@RequestBody Cp cp) {
-        Map map = new HashMap<String, Object>();
-        map.put("status", "success");
-        map.put("result", cpService.delete(cp));
-        return map;
-    }
 }

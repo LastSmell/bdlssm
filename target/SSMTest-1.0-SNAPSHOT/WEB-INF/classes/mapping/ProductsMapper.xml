@@ -165,4 +165,7 @@
         delete from product
         where no = #{no,jdbcType=INTEGER}
     </delete>
+
+
+
 </mapper>
