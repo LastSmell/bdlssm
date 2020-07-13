@@ -51,8 +51,6 @@ public class CustomersController {
         return map;
     }
 
-
-
     @RequestMapping("/updatePassword")
     @ResponseBody
     public Map<String, Object> updatePassword(@RequestBody Customers customers) {

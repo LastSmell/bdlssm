@@ -50,6 +50,17 @@ public class ProductsController {
         return map;
     }
 
+    @RequestMapping("/getByName")
+    @ResponseBody
+    public Map<String,Object> getByNo(@RequestBody Products products){
+        Map map = new HashMap<String, Object>();
+        map.put("status", "success");
+        map.put("data",productsService.getByNo(products));
+        return map;
+    }
+
+
+
     @RequestMapping("/updateReserve")
     @ResponseBody
     public Map<String,Object> updateReserve(@RequestBody Products products){

@@ -166,6 +166,11 @@
         where no = #{no,jdbcType=INTEGER}
     </delete>
 
-
+    <select id="selectSelective" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from products
+        where no = #{no,jdbcType=INTEGER}
+    </select>
 
 </mapper>

@@ -9,6 +9,7 @@ public interface ProductsService {
     List<Products> getAll();
     List<Products> getByName(Products products);
     List<Products> getMarketable();
+    List<Products> getByNo(Products products);
     int updateReserve(Products products);
     int updatePrice(Products products);
     int updateName(Products products);

@@ -28,6 +28,7 @@
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
+        <!--
         <table tableName="customers" enableCountByExample="false" enableSelectByPrimaryKey="true"
                enableDeleteByExample="false"
                enableSelectByExample="false" enableUpdateByExample="false"/>
@@ -35,6 +36,7 @@
         <table tableName="products" enableCountByExample="false" enableSelectByPrimaryKey="true"
                enableDeleteByExample="false"
                enableSelectByExample="false" enableUpdateByExample="false"/>
+-->
 
         <table tableName="cp" enableCountByExample="false" enableSelectByPrimaryKey="true"
                enableDeleteByExample="false"

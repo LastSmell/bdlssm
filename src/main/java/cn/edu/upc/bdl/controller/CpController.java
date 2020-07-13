@@ -42,6 +42,14 @@ public class CpController {
         return map;
     }
 
+    @RequestMapping("/getById1")
+    @ResponseBody
+    public Map<String, Object> getById1(@RequestBody Cp cp) {
+        Map map = new HashMap<String, Object>();
+        map.put("status", "success");
+        map.put("data", cpService.getById1(cp));
+        return map;
+    }
 
     @RequestMapping("/insert")
     @ResponseBody

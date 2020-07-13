@@ -35,4 +35,7 @@ public class ProductsServiceImpl implements ProductsService {
     public int delete(Products products){
         return productsMapper.delete(products.getNo());
     }
+    public List<Products> getByNo(Products products){
+        return productsMapper.selectSelective(products.getNo());
+    }
 }

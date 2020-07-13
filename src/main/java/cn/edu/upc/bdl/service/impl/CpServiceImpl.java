@@ -19,6 +19,9 @@ public class CpServiceImpl implements CpService{
     public List<Cp> getById(Cp cp){
         return cpMapper.selectById(cp.getId());
     }
+    public List<Cp> getById1(Cp cp){
+        return cpMapper.selectById1(cp.getId());
+    }
     public int insert(Cp cp){
         return cpMapper.insert(cp);
     }
