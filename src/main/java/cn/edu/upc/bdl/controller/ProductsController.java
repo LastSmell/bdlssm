@@ -50,7 +50,7 @@ public class ProductsController {
         return map;
     }
 
-    @RequestMapping("/getByName")
+    @RequestMapping("/getByNo")
     @ResponseBody
     public Map<String,Object> getByNo(@RequestBody Products products){
         Map map = new HashMap<String, Object>();

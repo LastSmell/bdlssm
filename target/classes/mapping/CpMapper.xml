@@ -155,5 +155,13 @@
     from cp
   </select>
 
+  <select id="selectById1" resultMap="BaseResultMap">
+    SELECT
+    cp.cpno,products.name,cp.qty,cp.date,cp.cost
+    FROM products,cp
+    WHERE products.`no`=cp.`no` AND  id=#{id,jdbcType=INTEGER}
+  </select>
+
+
 
 </mapper>
