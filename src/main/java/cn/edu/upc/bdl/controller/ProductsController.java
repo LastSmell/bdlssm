@@ -93,5 +93,14 @@ public class ProductsController {
         map.put("result",productsService.delete(products));
         return map;
     }
+    @RequestMapping("/update")
+    @ResponseBody
+    public Map<String,Object> update(@RequestBody Products products){
+        Map map = new HashMap<String, Object>();
+        map.put("status", "success");
+        map.put("result",productsService.updateByPrimaryKeySelective(products));
+        return map;
+    }
+
 
 }

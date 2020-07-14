@@ -149,7 +149,7 @@
 
     <update id="updateScoreById">
         update customers
-        set score = #{score,jdbcType=INTEGER}
+        set score = #{score,jdbcType=INTEGER}+score
         where id = #{id,jdbcType=INTEGER}
     </update>
 

@@ -162,7 +162,7 @@
     </select>
 
     <delete id="delete" parameterType="java.lang.Integer">
-        delete from product
+        delete from products
         where no = #{no,jdbcType=INTEGER}
     </delete>
 

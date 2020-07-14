@@ -60,5 +60,13 @@ public class CpController {
         return map;
     }
 
+    @RequestMapping("/update")
+    @ResponseBody
+    public Map<String, Object> update(@RequestBody Cp cp) {
+        Map map = new HashMap<String, Object>();
+        map.put("status", "success");
+        map.put("result", cpService.updateByPrimaryKeySelective(cp));
+        return map;
+    }
 
 }

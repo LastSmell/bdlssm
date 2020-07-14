@@ -8,4 +8,5 @@ public interface CpService {
     List<Cp> getById(Cp cp);
     List<Cp> getById1(Cp cp);
     int insert(Cp cp);
+    int updateByPrimaryKeySelective(Cp cp);
 }

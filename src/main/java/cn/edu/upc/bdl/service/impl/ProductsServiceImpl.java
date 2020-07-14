@@ -38,4 +38,7 @@ public class ProductsServiceImpl implements ProductsService {
     public List<Products> getByNo(Products products){
         return productsMapper.selectSelective(products.getNo());
     }
+    public  int updateByPrimaryKeySelective(Products products){
+        return productsMapper.updateByPrimaryKeySelective(products);
+    }
 }

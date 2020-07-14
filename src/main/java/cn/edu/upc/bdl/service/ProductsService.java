@@ -14,6 +14,6 @@ public interface ProductsService {
     int updatePrice(Products products);
     int updateName(Products products);
     int delete(Products products);
-
+    int updateByPrimaryKeySelective(Products products);
 
 }

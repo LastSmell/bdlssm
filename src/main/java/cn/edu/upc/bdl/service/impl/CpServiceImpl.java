@@ -25,4 +25,7 @@ public class CpServiceImpl implements CpService{
     public int insert(Cp cp){
         return cpMapper.insert(cp);
     }
+    public int updateByPrimaryKeySelective(Cp cp){
+        return cpMapper.updateByPrimaryKeySelective(cp);
+    }
 }
